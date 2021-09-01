@@ -1,0 +1,15 @@
+name: Random Assign Bot
+
+on:
+    issues:
+        types: [opened]
+
+jobs:
+    auto-assign:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 'Auto-assign issue'
+              uses: ./
+              with:
+                  repo-token: ${{ github.token }}
+                  assignees: siddhantdixit
