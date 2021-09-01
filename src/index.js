@@ -29,7 +29,7 @@ const run = async () => {
     try {
         await octokit.issues.addAssignees({
             owner,
-            repo,
+            ...context.repo,
             issue_number: issue.number,
             assignees
         });
