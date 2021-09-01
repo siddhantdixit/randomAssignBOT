@@ -13,4 +13,4 @@ jobs:
               uses: ./
               with:
                   repo-token: ${{ github.token }}
-                  assignees: siddhantdixit
+                  assignees: siddhantdixit, twentythreeapril
