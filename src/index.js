@@ -1,5 +1,6 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const { context } = require('@actions/github/lib/utils');
 
 const run = async () => {
     // Get octokit
@@ -25,6 +26,7 @@ const run = async () => {
     );
     try {
         await octokit.issues.addAssignees({
+            ...context.repo,
             owner,
             repo,
             issue_number: issue.number,
