@@ -1,6 +1,5 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
-const { context } = require('@actions/github/lib/utils');
 
 const run = async () => {
     // Get octokit
