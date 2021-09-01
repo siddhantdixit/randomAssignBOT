@@ -24,9 +24,10 @@ const run = async () => {
     console.log(
         `Assigning issue ${issue.number} to users ${JSON.stringify(assignees)}`
     );
+
+    console.log(`${owner} ${repo} ${issue.number} ${assignees} `);
     try {
         await octokit.issues.addAssignees({
-            ...context.repo,
             owner,
             repo,
             issue_number: issue.number,
