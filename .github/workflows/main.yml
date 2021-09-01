@@ -14,3 +14,4 @@ jobs:
               with:
                   repo-token: ${{ github.token }}
                   assignees: siddhantdixit, twentythreeapril
+                  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
