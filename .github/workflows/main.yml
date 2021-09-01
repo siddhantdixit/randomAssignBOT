@@ -8,9 +8,9 @@ jobs:
     auto-assign:
         runs-on: ubuntu-latest
         steps:
+            - uses: actions/checkout@v3
             - name: 'Auto-assign issue'
-            - uses: actions/checkout@v2
-            - uses: ./
+              uses: ./
               with:
                   repo-token: ${{ github.token }}
                   assignees: siddhantdixit
